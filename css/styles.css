@@ -1,13 +1,112 @@
 /*** MT: margin-top;
      Py: padding-top and Bottom;
+     pb: padding-bottom;
+     mb-4 mb-md-0: margin-bottom: 4px at medium-margin-bottom-0px;
+     d-none: display-none;
+     d-block: display-block;
+     d-md-block: display-block at-medium;
+     no-gutters
 
      fonts
 
-     font-family: 'Italianno', cursive;
+     font-family: 'Open Sans', sans-serif;
      font-family: 'Lato', sans-serif;
-     font-family: 'Raleway', sans-serif;
+     font-family: 'Handlee', cursive;
  **/
+
+
+/*** Global styles **/
+
+body {
+  background-color: #efefef;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+/* .container {
+  padding-right: 0px !important;
+} */
+
+.row {
+  margin-right: 0px !important;
+}
+
+a, a:hover, a:focus {
+    text-decoration: none;
+}
+
+* p {
+  font-weight: bold;
+  display: block;
+}
+
+/*** SOCIALS ICONS MENU STYLE **/
+
+.socials ul {
+  list-style: none;
+}
+
+.socials ul li {
+  position: relative;
+  display: inline-block;
+}
+
+.socials ul li a::before {
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  vertical-align: top;
+  font-variant: normal;
+  padding: 0 .75rem;
+  content: '\f08e';
+  -webkit-font-smoothing: antialiased;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-rendering: auto;
+}
+
+.socials ul li a[href*="facebook.com"]::before {
+  font-family: "Font Awesome 5 Brands";
+  content: '\f082';
+  color: #3B5998;
+}
+.socials ul li a[href*="twitter.com"]::before {
+  font-family: "Font Awesome 5 Brands";
+  content: '\f081';
+  color: #00aced;
+}
+.socials ul li a[href*="plus.google.com"]::before {
+  font-family: "Font Awesome 5 Brands";
+  content: '\f0d4';
+  color: #d34836;
+}
+
+/*** Main-CAROUSEL **/
+
+.carousel {
+    position: relative;
+    border: 5px solid #0f0f0f;
+}
+
 /*** NAVIGATION **/
+
+.bg-faded {
+  background-color: transparent;
+}
+
+.navbar-toggler {
+  background-color: #fff;
+  border-radius: 10%;
+  font-size: 8px;
+}
+
+ .flex-sm-row {
+  width: 100%;
+}
+
+.navbar-brand {
+  color: #fff !important;
+}
 
 h2 {
   font-size: 2.4rem;
@@ -17,29 +116,41 @@ h2 span {
   font-size: 4rem;
 }
 
+h3 {
+  font-size: 2rem;
+}
+
+h3 span {
+  font-size: 3rem;
+}
+
 h2, h3 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #000;
   line-height: 2.4rem;
 }
 
 h2 span,
 h3 span {
-  font-family: 'Italianno', cursive;
+  font-family: 'Handlee', cursive;
   display: block;
   color: #e082a8;
+  padding-bottom: 4px;
+}
+
+@media(max-width: 762px) {
+  .text-reduced {
+    font-family: 'Handlee', cursive;
+    display: block;
+    color: #e082a8;
+    padding-bottom: 0px;
+    font-size: 3rem;
+    font-weight: bold;
+  }
 }
 
 .navigation {
-  background-color: #8ed3cc;
-}
-
-nav.main-nav {
-  background-image: url(../img/border_horizontal.png),
-                    url(../img/border_horizontal.png);
-  background-repeat: repeat-x;
-  background-position: 0px top, 0px bottom;
-
+  background-color: #0f0f0f;
 }
 
 nav.main-nav .nav-item {
@@ -51,9 +162,48 @@ nav.main-nav .nav-item:hover {
   border-radius: 10px;
 }
 nav.main-nav .nav-link {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: 'Raleway', sans-serif;
   color: #fff;
+}
+
+/*** SITE HEADER LOGO STYLE **/
+
+header {
+  background-color: #191919;
+}
+
+.site-header--logo__headline {
+  font-size: .85rem;
+}
+
+@media (min-width: 762px) {
+  .site-header--logo__headline {
+    font-size: 1.25rem;
+  }
+}
+
+.site-header--logo {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.50rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media (min-width: 762px) {
+  .site-header--logo {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    text-decoration: none;
+  }
+}
+
+.logoStyle {
+  color: #a6d274;
 }
 
 /*** CAROUSEL STYLE **/
@@ -71,9 +221,359 @@ nav.main-nav .nav-link {
   font-size: 1.6rem;
   color: #979797;
   font-family: 'Lato', sans-serif;
+  padding-top: 10px;
+}
+
+@media(max-width: 762px) {
+  .new-website p {
+    font-size: 1rem;
+    color: #979797;
+    font-family: 'Lato', sans-serif;
+    padding-top: 0px;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+}
+
+@media (max-width: 762px) {
+  .no-style {
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
 }
 
 .no-style {
   color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  margin-bottom: -13px;
+}
+
+/*** IMAGE LINKS **/
+
+.image-links img {
+  border: 6px solid #dbe1e7;
+  -webkit-transition: transform .3s ease;
+  -ms-transition: transform .3s ease;
+}
+
+@media (min-width: 762px) {
+  .image-links img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+.image-info {
+  background-color: #fff;
+  margin-top: -50px;
+}
+
+.image-info .btn-success {
+  background-color: #e082ab;
+  border: none;
+  border-radius: 0px;
+}
+
+.image-info .btn-success:hover {
+  background-color: #ca5b88;
+}
+
+/*** HOURS **/
+
+.business-hours {
+  background-color: #111026;
+  /* color: rgba(255,255,255,0.65); */
+  color: #fff;
+}
+
+.business-hours h2 {
+  color: #fff;
+}
+
+.bg-hours {
+  background-image: url(../img/bg_hours.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+
+.table {
+  border: 2px solid #e0B2a8;
+}
+
+.table td,
+.table thead th {
+  border: none;
+}
+
+.table tbody tr td {
+  padding: .35rem;
+}
+
+.table-danger,
+.table-hover .table-danger:hover {
+  background-color: #e082ab;
+}
+
+/*** PRODUCTS **/
+
+.products .card {
+  border: none;
+}
+
+.products .card a {
+  color: #000;
+}
+
+.products .card a:hover {
+  text-decoration: none;
+}
+
+.products .card h3 {
+  font-size: 1.3rem;
+  color: #e882a8;
+  padding-top: 10px;
+  font-family: 'Handlee', cursive;
+}
+
+.products .card p {
+  font-size: .8rem;
+}
+
+.products .card p.price {
+  font-size: 1.52rem;
   font-family: 'Lato', sans-serif;
+  /* color: #979797; */
+  color: #111026;
+}
+
+/*** APPOINTMENT STYLE **/
+
+.appointment {
+  background-image: url(../img/bg_appointment.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-attachment: fixed; */
+}
+
+@media (min-width: 992px) {
+  .appointment {
+    background-image: url(../img/bg_appointment.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* background-attachment: fixed; */
+  }
+}
+
+.appointment h3 {
+  font-size: 2.5rem;
+  color: #fff;
+  line-height: 3rem;
+  letter-spacing: .25px;
+}
+
+@media (min-width: 992px) {
+  .appointment h3 {
+    letter-spacing: 10px;
+  }
+}
+
+.appointment p {
+  line-height: 2.6rem;
+  color: #fff;
+}
+
+.appointment .btn-primary {
+  background-color: #8ed3cc;
+  border-radius: 0;
+  border: none;
+  padding: 1rem 5rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.appointment .btn-primary:hover {
+  background-color: #68bebe;
+}
+
+/*** FOOTER STYLE **/
+
+.site-footer p.copyright {
+    font-family: 'Lato', sans-serif;
+    color: #979797;
+    font-size: 1rem;
+    display: block;
+}
+
+@media (max-width: 762px) {
+  .site-footer p.copyright {
+      font-family: 'Lato', sans-serif;
+      color: #979797;
+      font-size: 1rem;
+  }
+}
+
+/*** INTERNAL PAGES STYLE **/
+
+/*** ABOUT PAGE STYLE **/
+
+.hero {
+  position: relative;
+}
+
+.hero h2 {
+  background-color: #8ed3cc;
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  padding: 1rem 3rem 1rem 5rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  font-size: 3rem;
+  color: #fff;
+  /* can add no-getters on and off at about.php line-8 */
+}
+.facilities-gallery a {
+  margin-right: 16px;
+}
+
+.glotiaStyle {
+  color: #e082a8;
+}
+
+
+@media(min-width: 769px) and (max-width: 1202px) {
+  .facilities-gallery img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 762px) {
+  .about-picss-tyling img {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 1px;
+  }
+}
+
+
+.main-content p {
+  line-height: 2rem;
+}
+
+.sidebar.hours {
+  background-color: #57829c;
+  color: #fff;
+}
+
+.sidebar.hours p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+}
+
+.sidebar.hours h2 {
+  color: #fff;
+}
+
+.callUs {
+  color: #e082ab;
+  font-size: 1.25rem;
+}
+
+/*** modal-body STYLE **/
+
+.modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: .1rem;
+    background-color: #000;
+}
+
+/*** SINGLE PRODUCT **/
+
+.single-product {
+  color: #000;
+  letter-spacing: 1px;
+}
+
+/*** SERVICES STYLE **/
+
+#services .card-header {
+  /* background-color: #e082ab; */
+  background-color: #2c3438;
+}
+
+#services .card-header h3 a {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.8rem;
+}
+
+#services .card-block {
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+}
+
+
+aside.discount,
+aside.product_description {
+  background-color: #8ed3cc;
+  color: #fff;
+  -moz-background-clip: content-box;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+}
+
+aside.discount h3,
+aside.product_description h3 {
+  color: #fff;
+}
+
+aside.discount .coupon {
+  border: 1px dashed #fff;
+}
+
+aside.discount .coupon p {
+  font-size: 2rem;
+}
+
+aside.discount .coupon p span {
+  display: block;
+}
+
+/** CONTACT-FORM STYLE**/
+
+.contact-form {
+  border: 2px solid #9a9a9a;
+  background-color: #fff;
+}
+
+.contact-form .btn-primary {
+  background-color: #bed3cc;
+  border: none;
+  border-radius: 0;
+  padding: 1rem 6rem;
+  font-size: 1.25rem;
+}
+
+.contact-form .btn-primary:hover {
+  cursor: pointer;
+  background-color: #6bbdb5;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: #fff !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+
+.element.style {
+  display: none;
 }
